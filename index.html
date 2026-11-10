@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Neha 🎀 | Happy Birthday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #f47ba9;
+    --dark-pink: #d94d86;
+    --light-pink: #ffe3ef;
+    --text: #98516f;
+    --white: #fffafd;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light-pink);
+    color: var(--text);
+    overflow: hidden;
+    min-height: 100svh;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    min-height: 100svh;
+    height: 100svh;
+    overflow-y: auto;
+    position: absolute;
+    inset: 0;
+    padding: 35px 22px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.screen.active {
+    display: flex;
+    animation: pageEnter .7s ease both;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateX(35px) scale(.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--dark-pink);
+    font-size: clamp(43px, 12vw, 65px);
+    line-height: 1.4;
+}
+
+h2 {
+    color: var(--dark-pink);
+    font-size: 30px;
+}
+
+p {
+    line-height: 1.9;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+}
+
+.eyebrow {
+    display: inline-block;
+    background: white;
+    padding: 9px 18px;
+    border-radius: 30px;
+    color: var(--dark-pink);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 23px;
+}
+
+.subtitle {
+    font-size: 13px;
+    margin: 15px auto 25px;
+    max-width: 300px;
+}
+
+.main-btn {
+    background: linear-gradient(135deg, #f88ab5, #e65c96);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 8px 22px #e9a0be;
+    transition: .3s;
+}
+
+.main-btn:active {
+    transform: scale(.93);
+}
+
+.secondary-btn {
+    background: white;
+    color: var(--dark-pink);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.hero {
+    background: linear-gradient(145deg, #ffd2e4, #fff4f8, #ffc4dc);
+}
+
+.decor {
+    position: absolute;
+    pointer-events: none;
+    animation: floating 4s ease-in-out infinite;
+    font-size: 28px;
+}
+
+.d1 { top: 10%; left: 9%; }
+.d2 { top: 20%; right: 9%; animation-delay: 1s; }
+.d3 { bottom: 15%; left: 12%; animation-delay: 2s; }
+.d4 { bottom: 20%; right: 12%; animation-delay: .5s; }
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-18px) rotate(10deg); }
+}
+
+/* PIN SCREEN */
+
+.pin-screen {
+    background: linear-gradient(145deg, #ffe0ed, #fff7fa);
+}
+
+.pin-card {
+    background: white;
+    padding: 30px 23px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 12px 35px #edb4cc;
+}
+
+.pin-card h2 {
+    font-size: 29px;
+}
+
+.pin-dots {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.pin-dot {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ee8eb5;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.pin-dot.filled {
+    background: #e75d96;
+    transform: scale(1.2);
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 260px;
+    margin: auto;
+}
+
+.key {
+    background: #fff0f6;
+    color: #b84e7b;
+    height: 52px;
+    border-radius: 17px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.key:active {
+    background: #f6a2c3;
+    color: white;
+    transform: scale(.9);
+}
+
+.pin-message {
+    min-height: 25px;
+    font-size: 12px;
+    margin-top: 17px;
+    color: #df568c;
+}
+
+.shake {
+    animation: shake .3s;
+}
+
+@keyframes shake {
+    25% { transform: translateX(-7px); }
+    50% { transform: translateX(7px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* WISH SCREEN */
+
+.wish-screen {
+    background: linear-gradient(145deg, #ffe0ed, #fff8fb);
+}
+
+.wish-card {
+    background: white;
+    padding: 32px 23px;
+    border-radius: 28px;
+    box-shadow: 0 10px 35px #efbfd3;
+}
+
+.big-cake {
+    font-size: 85px;
+    margin: 15px 0;
+    animation: floating 3s infinite;
+}
+
+.wish-card p {
+    font-size: 13px;
+    margin: 15px 0 25px;
+}
+
+/* GALLERY */
+
+.gallery-screen {
+    background: #fff0f6;
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+    margin: 25px 0;
+}
+
+.photo-card {
+    background: white;
+    padding: 8px 8px 13px;
+    border-radius: 18px;
+    box-shadow: 0 5px 16px #edbfd3;
+    animation: photoEnter .8s both;
+}
+
+.photo-card:nth-child(2) { animation-delay: .15s; }
+.photo-card:nth-child(3) { animation-delay: .3s; }
+.photo-card:nth-child(4) { animation-delay: .45s; }
+
+@keyframes photoEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px) rotate(-4deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+.photo-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 13px;
+    display: block;
+}
+
+.photo-card p {
+    font-size: 11px;
+    margin-top: 9px;
+    color: #b04e7a;
+}
+
+/* FINAL LETTER */
+
+.final-screen {
+    background: linear-gradient(145deg, #ffdce9, #fff6fa);
+}
+
+.final-card {
+    background: white;
+    padding: 27px 22px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px #eab6cd;
+    text-align: left;
+}
+
+.final-card h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.final-card p {
+    font-size: 12px;
+    line-height: 2.1;
+    color: #93647a;
+}
+
+.signature {
+    text-align: center;
+    margin-top: 22px;
+    color: #e35d96;
+    font-family: 'Pacifico', cursive;
+    font-size: 21px;
+}
+
+.music-control {
+    position: fixed;
+    z-index: 100;
+    top: 16px;
+    right: 16px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: white;
+    color: #df5d94;
+    box-shadow: 0 4px 15px #e9a8c4;
+    font-size: 18px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-control.show {
+    display: flex;
+}
+
+.music-control.playing {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    z-index: 200;
+    pointer-events: none;
+    animation: rise 5s linear forwards;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 200;
+    pointer-events: none;
+    animation: confettiFall 3.5s linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media(max-height: 720px) {
+    .screen {
+        padding-top: 65px;
+        padding-bottom: 25px;
+    }
+
+    .photo-card img {
+        height: 115px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-control" id="musicBtn"
+onclick="toggleMusic()">🎵</button>
+
+
+<!-- PAGE 1: LANDING -->
+
+<section class="screen hero active" id="page1">
+
+    <div class="decor d1">🎀</div>
+    <div class="decor d2">💗</div>
+    <div class="decor d3">🌸</div>
+    <div class="decor d4">🦋</div>
+
+    <div class="container">
+
+        <div class="eyebrow">
+            A SPECIAL SURPRISE FOR YOU
+        </div>
+
+        <h1>Hey Neha! 🎀</h1>
+
+        <h2 style="font-size:20px; margin-top:15px;">
+            Something Special Awaits You...
+        </h2>
+
+        <p class="subtitle">
+            Someone has prepared a little surprise
+            just for you. Are you ready to discover it?
+        </p>
+
+        <button class="main-btn" onclick="goTo(2)">
+            Let's Start 💗
+        </button>
+
+        <p style="font-size:11px; margin-top:35px;">
+            Made with lots of love 🌷
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 2: PIN -->
+
+<section class="screen pin-screen" id="page2">
+
+    <div class="container">
+
+        <div style="font-size:55px; margin-bottom:15px;">
+            🔐
+        </div>
+
+        <div class="pin-card" id="pinCard">
+
+            <h2>A Little Secret!</h2>
+
+            <p style="font-size:12px; margin-top:10px;">
+                Enter the secret PIN to unlock your surprise 💕
+            </p>
+
+            <div class="pin-dots">
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+            </div>
+
+            <div class="keypad">
+
+                <button class="key" onclick="addPin('1')">1</button>
+                <button class="key" onclick="addPin('2')">2</button>
+                <button class="key" onclick="addPin('3')">3</button>
+
+                <button class="key" onclick="addPin('4')">4</button>
+                <button class="key" onclick="addPin('5')">5</button>
+                <button class="key" onclick="addPin('6')">6</button>
+
+                <button class="key" onclick="addPin('7')">7</button>
+                <button class="key" onclick="addPin('8')">8</button>
+                <button class="key" onclick="addPin('9')">9</button>
+
+                <button class="key" onclick="clearPin()">⌫</button>
+                <button class="key" onclick="addPin('0')">0</button>
+                <button class="key" onclick="checkPin()">✓</button>
+
+            </div>
+
+            <div class="pin-message" id="pinMessage">
+                Hint: It's a special number! 🎀
+            </div>
+
+        </div>
+
+        <button class="secondary-btn" onclick="goTo(1)">
+            ← Go Back
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 3: BIRTHDAY WISH -->
+
+<section class="screen wish-screen" id="page3">
+
+    <div class="container">
+
+        <div class="wish-card">
+
+            <div style="font-size:35px;">✨ 🎀 ✨</div>
+
+            <h1 style="font-size:43px;">
+                Happy Birthday!
+            </h1>
+
+            <h2 style="font-size:35px;">
+                Neha 💗
+            </h2>
+
+            <div class="big-cake">🎂</div>
+
+            <p>
+                Today is your special day!
+                A new chapter, new memories
+                and countless reasons to smile.
+            </p>
+
+            <p style="font-size:22px;">🌸 💝 🦋</p>
+
+            <button class="main-btn" onclick="goTo(4)">
+                Next → 
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 4: PHOTOS -->
+
+<section class="screen gallery-screen" id="page4">
+
+    <div class="gallery-container">
+
+        <div class="eyebrow">A FEW LITTLE MEMORIES</div>
+
+        <h2>Beautiful Moments 📸</h2>
+
+        <p class="subtitle">
+            Some pictures, some memories
+            and a whole lot of happiness.
+        </p>
+
+        <div class="gallery-grid">
+
+<!-- FULLSCREEN PHOTO VIEWER -->
+
+<div class="photo-viewer" id="photoViewer">
+
+    <button class="close-viewer" onclick="closeViewer()">✕</button>
+
+    <button class="viewer-arrow left"
+    onclick="changePhoto(-1)">❮</button>
+
+    <div class="viewer-content">
+
+        <img id="viewerImage" src="" alt="Neha's photo">
+
+        <p id="viewerCaption"></p>
+
+        <div class="photo-counter" id="photoCounter"></div>
+
+    </div>
+
+    <button class="viewer-arrow right"
+    onclick="changePhoto(1)">❯</button>
+
+</div>
+
+
+            <div class="photo-card">
+                <img src="assets/photos/photo1.jpg"
+                alt="Neha memory 1">
+                <p>Cutest Smile 💗</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="assets/photos/photo2.jpg"
+                alt="Neha memory 2">
+                <p>Little Sunshine 🌸</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="assets/photos/photo3.jpg"
+                alt="Neha memory 3">
+                <p>Beautiful Soul 🦋</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="assets/photos/photo4.jpg"
+                alt="Neha memory 4">
+                <p>Forever Special 🎀</p>
+            </div>
+
+        </div>
+
+        <button class="main-btn" onclick="goTo(5)">
+            Continue 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 5: FINAL LETTER -->
+
+<section class="screen final-screen" id="page5">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            A LETTER JUST FOR YOU 💌
+        </div>
+
+        <div class="final-card">
+
+            <h2>Dear Neha, 💗</h2>
+
+            <p>
+
+            Happy Birthdayyy Nehaaaaa! 🎂🎀💗
+            Aajker din ta tor jonno onek onek special,
+            ar ami chai tor jiboner prottekta din
+            erokom happiness, excitement ar endless
+            smile diye bhore uthuk. Tui jeno jibone
+            tor prottekta dream fulfill korte parish,
+            ja kichu achieve korte chash sob kichute
+            success pash. Tor mukher ei cute smile ta
+            jeno kokhono hariye na jay. Jibone onek
+            manush ashbe, onek rokom experience hobe,
+            kichu din khub bhalo katbe abar kichu din
+            hoyto ektu difficult o hobe, but always
+            nijer upor confidence rakhbi ar nijer
+            dreams gulo ke kokhono chhere dibi na.
+
+            <br><br>
+
+            I hope tor ei new year of life onek
+            beautiful memories, unexpected surprises,
+            new adventures ar countless happy moments
+            niye ashbe. Tor prottekta chhoto chhoto
+            wish puron hok, tor jibone bhalobasha,
+            peace ar positivity bhore thakuk.
+            Nijer moto kore hasbi, enjoy korbi,
+            ghurbi, moja korbi ar life-er prottekta
+            moment ke cherish korbi. Ar haan,
+            nijer care nite bhulbi na!
+
+            <br><br>
+
+            Today is all about you, so enjoy every
+            second of it. Tor birthday ta jeno
+            tor motoi cute, beautiful ar unforgettable
+            hoy. May you always stay blessed and
+            keep shining like the brightest star.
+            Thank you for being the wonderful person
+            that you are.
+
+            <br><br>
+
+            Once again, Happiest Birthday Neha!
+            Lots and lots of love, happiness and
+            best wishes for your future.
+            Keep smiling, keep shining and
+            stay the same amazing Neha foreverrr! 💗
+
+            </p>
+
+            <div class="signature">
+                With Lots Of Love 🎀
+            </div>
+
+        </div>
+
+        <p style="font-size:22px; margin-top:22px;">
+            🌷 💗 🦋 🎂 ✨
+        </p>
+
+        <button class="secondary-btn" onclick="goTo(1)">
+            Relive The Surprise ↻
+        </button>
+
+    </div>
+
+</section>
+
+
+<script>
+
+// SETTINGS
+
+const SECRET_PIN = "1311";
+
+let enteredPin = "";
+
+let musicStarted = false;
+
+
+// PAGE NAVIGATION
+
+function goTo(pageNumber) {
+
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+    });
+
+    document.getElementById("page" + pageNumber)
+        .classList.add("active");
+
+    window.scrollTo(0, 0);
+
+    if (!musicStarted) {
+        startMusic();
+    }
+
+    if (pageNumber === 3) {
+        celebration();
+    }
+
+    if (pageNumber === 5) {
+        createHearts(20);
+    }
+
+}
+
+
+// PIN SYSTEM
+
+function addPin(number) {
+
+    if (enteredPin.length >= 4) return;
+
+    enteredPin += number;
+
+    updateDots();
+
+}
+
+function clearPin() {
+
+    enteredPin = enteredPin.slice(0, -1);
+
+    updateDots();
+
+}
+
+function updateDots() {
+
+    const dots = document.querySelectorAll(".pin-dot");
+
+    dots.forEach((dot, index) => {
+
+        dot.classList.toggle(
+            "filled",
+            index < enteredPin.length
+        );
+
+    });
+
+    document.getElementById("pinMessage").textContent =
+        "Enter your secret PIN 💗";
+
+}
+
+function checkPin() {
+
+    const message = document.getElementById("pinMessage");
+
+    if (enteredPin === SECRET_PIN) {
+
+        message.textContent = "Unlocked! Welcome Neha! 💗";
+
+        setTimeout(() => {
+
+            enteredPin = "";
+
+            updateDots();
+
+            goTo(3);
+
+        }, 700);
+
+    } else {
+
+        message.textContent = "Oops! Wrong PIN. Try again! 🌸";
+
+        const card = document.getElementById("pinCard");
+
+        card.classList.add("shake");
+
+        setTimeout(() => {
+            card.classList.remove("shake");
+        }, 400);
+
+        enteredPin = "";
+
+        updateDots();
+
+    }
+
+}
+
+
+// MUSIC SYSTEM
+
+const music = document.getElementById("bgMusic");
+
+const musicBtn = document.getElementById("musicBtn");
+
+async function startMusic() {
+
+    try {
+
+        await music.play();
+
+        musicStarted = true;
+
+        musicBtn.classList.add("show", "playing");
+
+        musicBtn.textContent = "🎵";
+
+    } catch(error) {
+
+        musicBtn.classList.add("show");
+
+        musicBtn.textContent = "▶";
+
+    }
+
+}
+
+function toggleMusic() {
+
+    if (music.paused) {
+
+        startMusic();
+
+    } else {
+
+        music.pause();
+
+        musicBtn.classList.remove("playing");
+
+        musicBtn.textContent = "🔇";
+
+    }
+
+}
+
+
+// FLOATING HEARTS
+
+function createHearts(amount = 15) {
+
+    const emojis = ["💗", "💕", "💖", "🌸", "🎀"];
+
+    for (let i = 0; i < amount; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.textContent =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            (16 + Math.random() * 20) + "px";
+
+        heart.style.animationDuration =
+            (3 + Math.random() * 3) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6500);
+
+    }
+
+}
+
+
+// CONFETTI CELEBRATION
+
+function celebration() {
+
+    const symbols = ["🎉", "✨", "💗", "🎀", "🌸"];
+
+    for (let i = 0; i < 40; i++) {
+
+        const confetti = document.createElement("div");
+
+        confetti.className = "confetti";
+
+        confetti.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        confetti.style.left = Math.random() * 100 + "vw";
+
+        confetti.style.animationDuration =
+            (2 + Math.random() * 3) + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => confetti.remove(), 5500);
+
+    }
+
+    createHearts(15);
+
+}
+
+
+// AUTOMATIC DECORATION
+
+setInterval(() => {
+
+    if (document.querySelector(".screen.active")) {
+        createHearts(2);
+    }
+
+}, 5000);
+
+
+// MUSIC BUTTON VISIBILITY
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    musicBtn.classList.add("show");
+
+});
+
+</script>
+
+</body>
+</html>
